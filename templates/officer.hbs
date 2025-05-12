@@ -1,0 +1,201 @@
+<form autocomplete="off">
+    <div class="officerCard">
+        <article class="bio">
+            <section class="nav">
+                <img src="{{actor.img}}" title="{{actor.name}}" data-edit="img"/>
+                <h1><input name="name" type="text" placeholder="Name" value="{{actor.name}}"/></h1>
+            </section>
+            {{> "systems/glina/templates/parts/attr.hbs" system.attributes}}
+            <div class="archetype">
+                <h3>Archetyp: </h3>
+                <input type="text" name="system.archetype" value="{{system.archetype}}" placeholder="Archetyp">
+                <h3>Stopień: </h3>
+                <p>{{system.pagonName}}</p>
+            </div>
+            <div>
+                <section class="look">
+                    <h3>Wygląd</h3>
+                    <p>
+                        <label>Twarz: </label>
+                        <input type="text" name="system.look.face" value="{{system.look.face}}"/>
+                    </p>
+                    <p>
+                        <label>Włosy: </label>
+                        <input type="text" name="system.look.hair" value="{{system.look.hair}}"/>
+                    </p>
+                    <p>
+                        <label>Sylwetka: </label>
+                        <input type="text" name="system.look.figure" value="{{system.look.figure}}"/>
+                    </p>
+                    <p>
+                        <label>Inne: </label>
+                        <input type="text" name="system.look.other" value="{{system.look.other}}"/>
+                    </p>
+                </section>
+                
+            </div>
+            <div>
+                <section class="desc">
+                    <h3>Rodzina</h3>
+                    <div class="ranks"></div>
+                    <p>
+                        <label for="partner">Partner</label>
+                        <input type="text" name="system.desc.partner" value="{{system.desc.partner}}" id="partner" />
+                    </p>
+                    <p>
+                        <label for="kids">Dzieci</label>
+                        <input type="text" name="system.desc.kids" value="{{system.desc.kids}}" id="kids" />
+                    </p>
+                    <p>
+                        <label for="parents">Rodzice</label>
+                        <input type="text" name="system.desc.parents" value="{{system.desc.parents}}" id="parents" />
+                    </p>
+                    <p>
+                        <label for="state">Stan Cywilny</label>
+                        <input type="text" name="system.desc.state" value="{{system.desc.state}}" id="state" />
+                    </p>
+                </section>
+            </div>
+            <section class="weakness">
+                <h3>Słabość</h3>
+                <input type="text" name="system.desc.weakness" value="{{system.desc.weakness}}">
+            </section>
+            <section class="importantPlace">
+                <h3>Ważne Miejsce</h3>
+                <input type="text" name="system.desc.importantPlace" value="{{system.desc.importantPlace}}">
+            </section>
+        </article>
+        <section class="archetype">
+            <ul>{{#each archetypeMoves as |move id|}}
+                {{> "systems/glina/templates/parts/move.hbs" move}}
+            {{/each}}</ul>
+        </section>
+        <article>
+            <section class="tabs">
+                <label for="{{actor._id}}_Tab1">
+                    <input name="system.activeTabs" type="radio" id="{{actor._id}}_Tab1" value="Śledztwo" {{#if (isEqual system.activeTabs "Śledztwo") }}checked{{/if}}/>
+                    Śledztwo
+                </label>
+                <label for="{{actor._id}}_Tab5">
+                    <input name="system.activeTabs" type="radio" id="{{actor._id}}_Tab5" value="Ruchy" {{#if (isEqual system.activeTabs "Ruchy") }}checked{{/if}}/>
+                    Personalne
+                </label>
+                <label for="{{actor._id}}_Tab2">
+                    <input name="system.activeTabs" type="radio" id="{{actor._id}}_Tab2" value="Więzi" {{#if (isEqual system.activeTabs "Więzi") }}checked{{/if}}/>
+                    Więzi
+                </label>
+                <label for="{{actor._id}}_Tab3">
+                    <input name="system.activeTabs" type="radio" id="{{actor._id}}_Tab3" value="Notatki" {{#if (isEqual system.activeTabs "Notatki") }}checked{{/if}}/>
+                    Notatki
+                </label>
+                <label class="item-add" data-type="Archetyp">
+                    Dodaj Ruch
+                </label>
+            </section>
+            {{#if (isEqual system.activeTabs "Śledztwo") }}
+            <section class="moves investigate">
+                <ul>
+                {{#each investigatorMoves as |move id|}}
+                    {{> "systems/glina/templates/parts/investigativeMoves.hbs" move}}
+                {{/each}}
+                </ul>
+            </section>
+            {{/if}}
+            {{#if (isEqual system.activeTabs "Ruchy") }}
+            <section class="moves personal">
+                <ul>
+                {{#each personalMoves as |move id|}}
+                    {{> "systems/glina/templates/parts/move.hbs" move}}
+                {{/each}}
+                </ul>
+            </section>
+            {{/if}}
+            {{#if (isEqual system.activeTabs "Więzi") }}
+            <section class="connections">
+                <ol class="relations">
+                    {{#each relations as |relation id|}}
+                        {{> "systems/glina/templates/parts/relation.hbs" relation}}
+                    {{/each}}
+                    <li class="add"><button class="item-add">
+                        Dodaj Więź
+                    </button></li>
+                </ol>
+            </section>
+            {{/if}}
+            {{#if (isEqual system.activeTabs "Notatki") }}
+            <section class="notes">
+                {{editor system.angle.DETAILS target="system.angle.DETAILS" button=true owner=owner editable=editable}}
+            </section>
+            {{/if}}
+        </article>
+    </div>
+<section class="trackers">
+    <div>
+        <div>
+            <p>PD</p>
+            <button data-tr="PD">{{system.trackers.PD}}</button>
+        </div>
+        <div>
+            <i class="fa-solid fa-hand-holding-medical"></i>
+            <button data-tr="hold">{{system.trackers.hold}}</button>
+        </div>
+        <div>
+            <i class="fa-solid fa-shield-halved"></i>
+            <button data-tr="Pagon">{{system.attributes.Pagon}}</button>
+        </div>
+        <div class="luck">
+            <i class="fa-solid fa-clover"></i>
+            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck+10" value="10" {{#if (isEqual system.trackers.luck 10) }}checked{{/if}}/><label for="{{actor._id}}_luck+10">10</label>
+            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck+9" value="9" {{#if (isEqual system.trackers.luck 9) }}checked{{/if}}/><label for="{{actor._id}}_luck+9">9</label>
+            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck+8" value="8" {{#if (isEqual system.trackers.luck 8) }}checked{{/if}}/><label for="{{actor._id}}_luck+8">8</label>
+            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck+7" value="7" {{#if (isEqual system.trackers.luck 7) }}checked{{/if}}/><label for="{{actor._id}}_luck+7">7</label>
+            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck+6" value="6" {{#if (isEqual system.trackers.luck 6) }}checked{{/if}}/><label for="{{actor._id}}_luck+6">6</label>
+            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck+5" value="5" {{#if (isEqual system.trackers.luck 5) }}checked{{/if}}/><label for="{{actor._id}}_luck+5">5</label>
+            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck+4" value="4" {{#if (isEqual system.trackers.luck 4) }}checked{{/if}}/><label for="{{actor._id}}_luck+4">4</label>
+            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck+3" value="3" {{#if (isEqual system.trackers.luck 3) }}checked{{/if}}/><label for="{{actor._id}}_luck+3">3</label>
+            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck+2" value="2" {{#if (isEqual system.trackers.luck 2) }}checked{{/if}}/><label for="{{actor._id}}_luck+2">2</label>
+            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck+1" value="1" {{#if (isEqual system.trackers.luck 1) }}checked{{/if}}/><label for="{{actor._id}}_luck+1">1</label>
+            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck-0" value="0" {{#if (isEqual system.trackers.luck 0) }}checked{{/if}}/><label for="{{actor._id}}_luck-0">0</label>
+            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck-1" value="-1" {{#if (isEqual system.trackers.luck -1) }}checked{{/if}}/><label for="{{actor._id}}_luck-1">-1</label>
+            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck-2" value="-2" {{#if (isEqual system.trackers.luck -2) }}checked{{/if}}/><label for="{{actor._id}}_luck-2">-2</label>
+            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck-3" value="-3" {{#if (isEqual system.trackers.luck -3) }}checked{{/if}}/><label for="{{actor._id}}_luck-3">-3</label>
+            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck-4" value="-4" {{#if (isEqual system.trackers.luck -4) }}checked{{/if}}/><label for="{{actor._id}}_luck-4">-4</label>
+            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck-5" value="-5" {{#if (isEqual system.trackers.luck -5) }}checked{{/if}}/><label for="{{actor._id}}_luck-5">-5</label>
+            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck-6" value="-6" {{#if (isEqual system.trackers.luck -6) }}checked{{/if}}/><label for="{{actor._id}}_luck-6">-6</label>
+        </div>
+        <div class="stress">
+            <i class="fa-solid fa-droplet"></i>
+            <input name="system.trackers.stress" type="radio" id="{{actor._id}}_stress-5" value="5" {{#if (isEqual system.trackers.stress 5) }}checked{{/if}}/><label for="{{actor._id}}_stress-5">5</label>
+            <input name="system.trackers.stress" type="radio" id="{{actor._id}}_stress-4" value="4" {{#if (isEqual system.trackers.stress 4) }}checked{{/if}}/><label for="{{actor._id}}_stress-4">4</label>
+            <input name="system.trackers.stress" type="radio" id="{{actor._id}}_stress-3" value="3" {{#if (isEqual system.trackers.stress 3) }}checked{{/if}}/><label for="{{actor._id}}_stress-3">3</label>
+            <input name="system.trackers.stress" type="radio" id="{{actor._id}}_stress-2" value="2" {{#if (isEqual system.trackers.stress 2) }}checked{{/if}}/><label for="{{actor._id}}_stress-2">2</label>
+            <input name="system.trackers.stress" type="radio" id="{{actor._id}}_stress-1" value="1" {{#if (isEqual system.trackers.stress 1) }}checked{{/if}}/><label for="{{actor._id}}_stress-1">1</label>
+            <input name="system.trackers.stress" type="radio" id="{{actor._id}}_stress-0" value="0" {{#if (isEqual system.trackers.stress 0) }}checked{{/if}}/><label for="{{actor._id}}_stress-0">0</label>
+        </div>
+        <div class="hour">
+            <i class="fa-regular fa-clock"></i>
+            <input name="system.trackers.hour" type="radio" id="{{actor._id}}_hour-8" value="8" {{#if (isEqual system.trackers.hour 8) }}checked{{/if}}/><label for="{{actor._id}}_hour-8">8</label>
+            <input name="system.trackers.hour" type="radio" id="{{actor._id}}_hour-7" value="7" {{#if (isEqual system.trackers.hour 7) }}checked{{/if}}/><label for="{{actor._id}}_hour-7">7</label>
+            <input name="system.trackers.hour" type="radio" id="{{actor._id}}_hour-6" value="6" {{#if (isEqual system.trackers.hour 6) }}checked{{/if}}/><label for="{{actor._id}}_hour-6">6</label>
+            <input name="system.trackers.hour" type="radio" id="{{actor._id}}_hour-5" value="5" {{#if (isEqual system.trackers.hour 5) }}checked{{/if}}/><label for="{{actor._id}}_hour-5">5</label>
+            <input name="system.trackers.hour" type="radio" id="{{actor._id}}_hour-4" value="4" {{#if (isEqual system.trackers.hour 4) }}checked{{/if}}/><label for="{{actor._id}}_hour-4">4</label>
+            <input name="system.trackers.hour" type="radio" id="{{actor._id}}_hour-3" value="3" {{#if (isEqual system.trackers.hour 3) }}checked{{/if}}/><label for="{{actor._id}}_hour-3">3</label>
+            <input name="system.trackers.hour" type="radio" id="{{actor._id}}_hour-2" value="2" {{#if (isEqual system.trackers.hour 2) }}checked{{/if}}/><label for="{{actor._id}}_hour-2">2</label>
+            <input name="system.trackers.hour" type="radio" id="{{actor._id}}_hour-1" value="1" {{#if (isEqual system.trackers.hour 1) }}checked{{/if}}/><label for="{{actor._id}}_hour-1">1</label>
+            <input name="system.trackers.hour" type="radio" id="{{actor._id}}_hour-0" value="0" {{#if (isEqual system.trackers.hour 0) }}checked{{/if}}/><label for="{{actor._id}}_hour-0">0</label>
+        </div>
+    </div>
+</section>
+<section class="labels">
+    <ol>
+        {{#each labels as |label id|}}
+            {{> "systems/glina/templates/parts/label.hbs" label}}
+        {{/each}}
+        <li class="add">
+            <button class="item-add">
+                Dodaj Etykietę
+            </button>
+        </li>
+    </ol>
+</section>
+</form>

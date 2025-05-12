@@ -1,0 +1,13 @@
+<li value="{{system.value}}" class="relation {{#if (isNotEqual img "icons/svg/item-bag.svg")}}withImg{{/if}}" autocomplete="off" data-item-id="{{_id}}">
+    <input class="relation-value" type="number" name="{{system.value}}" value="{{system.value}}">
+    {{#if (isNotEqual img "icons/svg/item-bag.svg")}}
+            <img src="{{img}}" title="{{name}}">
+    {{/if}}
+    <p class="person"> {{name}} </p>
+    <button class="item-delete">
+        <i class="fas fa-minus"></i>
+    </button>
+    <div class="description">
+        {{{system.desc}}}
+    </div>
+</li> 

@@ -1,0 +1,24 @@
+{
+    "id": "glina",
+    "title": "Glina",
+    "description": "System do grania Gliny!",
+    "authors": [
+      {
+        "name": "Kiszu",
+        "discord": "2137",
+        "url": "https://github.com/P4NTY/"
+      }
+    ],
+    "version": "0.1",
+    "compatibility": {
+      "minimum": 11,
+      "verified": 12,
+      "maximum": 13
+    },
+    "esmodules": [ "main.js" ],
+    "styles": ["main.css" ],
+    "url": "",
+    "background": "",
+    "manifest": "",
+    "download": ""
+  }

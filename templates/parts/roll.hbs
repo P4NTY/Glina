@@ -1,0 +1,58 @@
+<style>
+    .modsButtons {
+        display: flex;
+    }   
+    .modsButtons {
+        padding-bottom: 10px;
+    }
+    .modsButtons input {
+        display: none;
+    }
+    .modsButtons label {
+        border: 1px solid gray;
+        padding: 5px 10px;
+        background: #abf;
+        text-align: center;
+    }
+    .modsButtons input:checked ~ label {
+        background: #fba;
+    }
+    .modsButtons input:checked + label {
+        background: #abf;
+        flex-grow: 1;
+    }
+    .dialogAsk .option {
+        padding: 5px 0;
+    }
+</style>
+<div class="dialogAsk">
+    <div>
+        {{{description}}}
+    </div>
+    {{#if (isEqual roll "ask")}}
+    <div class="options">
+        {{#each itemOptions  as |option id|}}
+        <div class="option">
+            <input type="radio" id="{{id}}" value="{{option.attribute}}" name="option.attribute" {{#if (isEqual id 0)}}checked{{/if}}>
+            <label for="{{id}}"><strong>{{#if (isEqual option.attribute "Pagon")}}Stopień Służbowy{{else}}{{option.attribute}}{{/if}}</strong> - {{option.desc}}</label>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+    <h3>Modyfikator: </h3>
+    <div class="modsButtons">
+        {{#if (isNotEqual roll "stress")}}
+        <input type="radio" id="v-3" name="mod" value="-3" {{#if (isEqual hold -3)}}checked{{/if}}><label for="v-3">-3</label>
+        <input type="radio" id="v-2" name="mod" value="-2" {{#if (isEqual hold -2)}}checked{{/if}}><label for="v-2">-2</label>
+        <input type="radio" id="v-1" name="mod" value="-1" {{#if (isEqual hold -1)}}checked{{/if}}><label for="v-1">-1</label>
+        <input type="radio" id="v0" name="mod" value="0" {{#if (isEqual hold 0)}}checked{{/if}}><label for="v0">0</label>
+        {{/if}}
+        <input type="radio" id="v1" name="mod" value="1" {{#if (isEqual hold 1)}}checked{{/if}}><label for="v1">1</label>
+        <input type="radio" id="v2" name="mod" value="2" {{#if (isEqual hold 2)}}checked{{/if}}><label for="v2">2</label>
+        <input type="radio" id="v3" name="mod" value="3" {{#if (isEqual hold 3)}}checked{{/if}}><label for="v3">3</label>
+        {{#if (isNotEqual roll "stress")}}
+        <input type="radio" id="v4" name="mod" value="4" {{#if (isEqual hold 4)}}checked{{/if}}><label for="v4">4</label>
+        <input type="radio" id="v5" name="mod" value="5" {{#if (isEqual hold 5)}}checked{{/if}}><label for="v5">5</label>
+        {{/if}}
+    </div>
+</div>

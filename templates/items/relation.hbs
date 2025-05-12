@@ -1,0 +1,12 @@
+<form class="relation" autocomplete="off">
+    <div class="nav">
+        <input type="number" name="system.value" value="{{system.value}}">
+        <input type="text" name="name" value="{{item.name}}">
+    </div>
+    <div class="desc">
+        <div class="img">
+            <img src="{{item.img}}" title="{{item.name}}" data-edit="img">
+        </div>
+        {{editor system.desc target="system.desc" button=true owner=owner editable=editable}}
+    </div>
+</form>

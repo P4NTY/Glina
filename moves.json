@@ -1,0 +1,461 @@
+[
+    {
+        "name": "Komunikacja Interpersonalna",
+        "type": "move",
+        "system": {
+            "desc": "<p>Gdy prowadzisz rozmowę z osobą lub grupą, aby zdobyć dowody lub inną korzyść,&nbsp;wykonaj test.&nbsp;</p>",
+            "sukcess": "<p>Rozmowa idzie po twojej myśli. Dowiadujesz się tego, czego potrzebowałeś.</p>\n<ul>\n<li>Otrzymujesz +2 do szczęścia psa,&nbsp;</li>\n<li>Otrzymujesz +1 do zdobycia tropu (jeżeli musisz zapełnić ścieżkę postępu).&nbsp;</li>\n</ul>",
+            "patrial": "<p>Dowiadujesz się tego, czego potrzebowałeś.</p>",
+            "fail": "<p>Rozmowa idzie jak po grudzie. Rozm&oacute;wca nie wsp&oacute;łpracuje z tobą.&nbsp;</p>\n<ul>\n<li>Uruchom ścieżkę postępu,&nbsp;</li>\n<li>Otrzymujesz +1 stresu,&nbsp;</li>\n<li>Mistrz gry wybiera z listy jedną konsekwencję lub wykonuje sw&oacute;j ruch.&nbsp;</li>\n</ul>",
+            "options": [
+                {
+                    "id": "0",
+                    "attribute": "Inteligencja",
+                    "desc": "Gdy używasz autorytetu, okazujesz szacunek lub komplementujesz"
+                },
+                {
+                    "id": "1",
+                    "attribute": "Osobowość",
+                    "desc": "Gdy uwodzisz, bratasz się lub okazujesz empatię"
+                },
+                {
+                    "id": "2",
+                    "attribute": "Psychika",
+                    "desc": "Gdy przesłuchujesz, pokazujesz cechy przywódcze albo negocjujesz"
+                },
+                {
+                    "id": "3",
+                    "attribute": "Zmysły",
+                    "desc": "Gdy rozpoznajesz, czy ktoś mydli ci oczy"
+                }
+            ],
+            "category": "Śledczy",
+            "roll": "ask"
+        }
+    },
+    {
+        "name": "Książka telefoniczna",
+        "type": "move",
+        "system": {
+            "desc": "<p>Gdy korzystasz ze swoich kontakt&oacute;w ze znajomymi, grupami lub instytucjami, wykonaj test.</p>",
+            "sukcess": "<p>Kontakt okazuje się bardzo pomocny, co jest dla ciebie zastrzykiem energii.</p>\n<ul>\n<li>Otrzymujesz +1 do szczęścia psa,</li>\n<li>Otrzymujesz +1 do następnego ruchu.</li>\n</ul>",
+            "patrial": "<p>Kontakt okazuje się pomocny.</p>",
+            "fail": "<p>Poszło gorzej, niż się spodziewałeś. Kontakt jest niedostępny lub dotknąłeś pajęczej nici, kt&oacute;ra alarmuje jej tw&oacute;rcę.</p>\n<ul>\n<li>Uruchom ścieżkę postępu,&nbsp;</li>\n<li>Otrzymujesz +1 stresu,&nbsp;</li>\n<li>Mistrz gry wybiera z listy jedną konsekwencję lub wykonuje sw&oacute;j ruch.&nbsp;</li>\n</ul>",
+            "options": [
+                {
+                    "id": "0",
+                    "attribute": "Inteligencja",
+                    "desc": "Gdy zasięgasz języka wśród policjantów lub instytucji."
+                },
+                {
+                    "id": "1",
+                    "attribute": "Psychika",
+                    "desc": "Gdy kontaktujesz się z półświatkiem lub korzystasz z informatorów"
+                },
+                {
+                    "id": "2",
+                    "attribute": "Osobowość",
+                    "desc": "Gdy rozmawiasz ze starymi znajomymi, dziennikarzami lub śledczymi spoza  firmy"
+                }
+            ],
+            "category": "Śledczy",
+            "roll": "ask"
+        }
+    },
+    {
+        "name": "Pomoc specjalistów",
+        "type": "move",
+        "system": {
+            "desc": "<p>Gdy potrzebujesz opinii biegłych w zakresie medycyny, kryminalistyki czy innych nauk albo pomocy grupy kontrterrorystycznej, wykonaj rzut + stopień służbowy.&nbsp;</p>",
+            "sukcess": "<p>Badanie zostaje wykonane zgodnie z procedurą i przynosi dodatkowe informacje. Wybierz dwa elementy:&nbsp;</p>\n<ul>\n<li>Otrzymujesz +2 do szczęścia psa,&nbsp;</li>\n<li>Otrzymujesz +1 do następnego ruchu,&nbsp;</li>\n<li>Otrzymujesz +2 do zdobycia tropu (jeżeli musisz zapełnić ścieżkę postępu).&nbsp;</li>\n</ul>",
+            "patrial": "<p>Badanie zostaje wykonane zgodnie z procedurą. Wybierz jeden element:&nbsp;</p>\n<ul>\n<li>Otrzymujesz +1 do szczęścia psa,&nbsp;</li>\n<li>Otrzymujesz +1 do następnego ruchu.</li>\n</ul>",
+            "fail": "<p>Wszystko idzie nie tak, jak powinno.&nbsp;</p>\n<ul>\n<li>Uruchom ścieżkę postępu,&nbsp;</li>\n<li>Otrzymujesz +1 stresu,&nbsp;</li>\n<li>Mistrz gry wybiera z listy jedną konsekwencję lub wykonuje sw&oacute;j ruch.</li>\n</ul>",
+            "options": "",
+            "category": "Śledczy",
+            "roll": "Pagon"
+        }
+    },
+    {
+        "name": "Praca operacyjno-rozpoznawcza",
+        "type": "move",
+        "system": {
+            "desc": "<p>Gdy jesteś w terenie i rozpracowujesz daną sprawę, wykonaj test.</p>",
+            "sukcess": "<p>Praca w terenie to kwintesencja policyjnej roboty. Twoje działanie przynosi skutek. Wybierz dwa elementy:</p>\n<ul>\n<li>Otrzymujesz +1 do szczęścia psa,&nbsp;</li>\n<li>Otrzymujesz +1 do następnego ruchu,&nbsp;</li>\n<li>Otrzymujesz +2 do zdobycia tropu (jeżeli musisz zapełnić ścieżkę postępu).&nbsp;</li>\n</ul>",
+            "patrial": "<p>Wykonana praca wnosi nowe informacje do śledztwa.</p>\n<ul>\n<li>Otrzymujesz +1 do zdobycia tropu (jeżeli musisz zapełnić ścieżkę postępu).&nbsp;</li>\n</ul>",
+            "fail": "<p>Może pozostanie przy biurku byłoby lepszą decyzją? Tym razem działania nie poszły po twojej myśli.&nbsp;</p>\n<ul>\n<li>Uruchom ścieżkę postępu,&nbsp;</li>\n<li>Otrzymujesz +1 stresu,&nbsp;</li>\n<li>Mistrz gry wybiera z listy jedną konsekwencję lub wykonuje sw&oacute;j ruch.&nbsp;</li>\n</ul>",
+            "options": [
+                {
+                    "id": "0",
+                    "attribute": "Psychika",
+                    "desc": "Gdy obserwujesz kogoś lub się ukrywasz"
+                },
+                {
+                    "id": "1",
+                    "attribute": "Sprawność",
+                    "desc": "Gdy uczestniczysz w pościgu pieszym, brawurowo prowadzisz samochód,  śledzisz kogoś lub infiltrujesz miejsce"
+                },
+                {
+                    "id": "2",
+                    "attribute": "Zmysły",
+                    "desc": "Gdy dokonujesz przeszukania, oględzin lub się włamujesz"
+                },
+                {
+                    "id": "3",
+                    "attribute": "Osobowość",
+                    "desc": "Gdy wypytujesz grupę osób o interesujące cię sprawy"
+                },
+                {
+                    "id": "4",
+                    "attribute": "Inteligencja",
+                    "desc": "Gdy oceniasz czyjeś zachowanie na podstawie mowy ciała"
+                }
+            ],
+            "category": "Śledczy",
+            "roll": "ask"
+        }
+    },
+    {
+        "name": "Przemoc",
+        "type": "move",
+        "system": {
+            "desc": "<p>Gdy używasz lub jesteś obiektem przemocy fizycznej albo psychicznej, wykonaj test.</p>",
+            "sukcess": "<p>Przeciwnik zostaje pokonany, przejmujesz inicjatywę lub wygrywasz.</p>\n<ul>\n<li>Otrzymujesz +1 do następnego ruchu,&nbsp;</li>\n<li>Otrzymujesz +1 stresu,&nbsp;</li>\n<li>Otrzymujesz +2 do zdobycia tropu (jeżeli musisz zapełnić ścieżkę postępu)</li>\n</ul>",
+            "patrial": "<p>Przeciwnik zostaje pokonany, przejmujesz inicjatywę lub wygrywasz, ale kosztowało cię to więcej, niż się spodziewałeś.</p>\n<ul>\n<li>Otrzymujesz +1 stresu.</li>\n</ul>",
+            "fail": "<p>Niestety, nie tym razem. Do wesela się zagoi.&nbsp;</p>\n<ul>\n<li>Uruchom ścieżkę postępu,&nbsp;</li>\n<li>Otrzymujesz +1 stresu,&nbsp;</li>\n<li>Mistrz gry wybiera z listy jedną konsekwencję lub wykonuje sw&oacute;j ruch.</li>\n</ul>",
+            "options": [
+                {
+                    "id": "0",
+                    "attribute": "Sprawność",
+                    "desc": "Gdy walczysz wręcz, demolujesz lub uciekasz"
+                },
+                {
+                    "id": "1",
+                    "attribute": "Zmysły",
+                    "desc": "Gdy używasz broni palnej"
+                },
+                {
+                    "id": "2",
+                    "attribute": "Inteligencja",
+                    "desc": "Gdy pracujesz z ładunkami wybuchowymi"
+                },
+                {
+                    "id": "3",
+                    "attribute": "Psychika",
+                    "desc": "Gdy zastraszasz lub musisz okazać zimną krew"
+                }
+            ],
+            "category": "Śledczy",
+            "roll": "ask"
+        }
+    },
+    {
+        "name": "Robienie w wała",
+        "type": "move",
+        "system": {
+            "desc": "<p>Gdy wykorzystujesz przeciw drugiej osobie nieuczciwe metody, wykonaj test.</p>",
+            "sukcess": "<p>Masz nerwy ze stali i poradziłeś sobie wzorowo.</p>\n<ul>\n<li>Otrzymujesz +1 do następnego ruchu,&nbsp;</li>\n<li>Otrzymujesz +2 do zdobycia tropu (jeżeli musisz zapełnić ścieżkę postępu).</li>\n</ul>",
+            "patrial": "<p>Podjąłeś ryzyko i tym razem się udało, ale kosztowało cię to sporo nerw&oacute;w.</p>\n<ul>\n<li>Otrzymujesz +1 stresu.</li>\n</ul>",
+            "fail": "<p>Coś poszło nie tak, jak powinno.</p>\n<ul>\n<li>Uruchom ścieżkę postępu,</li>\n<li>Otrzymujesz +1 stresu,</li>\n<li>Mistrz gry wybiera z listy jedną konsekwencję lub wykonuje sw&oacute;j ruch.</li>\n</ul>",
+            "options": [
+                {
+                    "id": "0",
+                    "attribute": "Psychika",
+                    "desc": "Gdy kłamiesz, manipulujesz lub przekupujesz kogoś"
+                },
+                {
+                    "id": "1",
+                    "attribute": "Inteligencja",
+                    "desc": "Gdy podszywasz się pod kogoś, dokonujesz lub korzystasz z fałszerstwa"
+                },
+                {
+                    "id": "2",
+                    "attribute": "Sprawność",
+                    "desc": "Gdy jesteś w przebraniu, ale ograniczasz rozmowę"
+                }
+            ],
+            "category": "Śledczy",
+            "roll": "ask"
+        }
+    },
+    {
+        "name": "Robota papierkowa",
+        "type": "move",
+        "system": {
+            "desc": "<p>Gdy uzupełniasz dokumentację związaną ze śledztwem, przeszukujesz zasoby biblioteki lub archiwum, analizujesz dokumenty, wykazujesz się znajomością przepis&oacute;w kodeksu karnego, wykonaj rzut + zmysły.&nbsp;</p>",
+            "sukcess": "<p>Dobre przygotowanie do pracy to podstawa sukcesu. Wybierz dwa elementy:&nbsp;</p>\n<ul>\n<li>Otrzymujesz +2 do szczęścia psa,&nbsp;</li>\n<li>Otrzymujesz +1 do następnego ruchu,&nbsp;</li>\n<li>Otrzymujesz +1 do zdobycia tropu (jeżeli musisz zapełnić ścieżkę postępu).</li>\n</ul>",
+            "patrial": "<p>Wykonujesz swoją robotę jak należy. Wybierz jeden element:</p>\n<ul>\n<li>Otrzymujesz +1 do szczęścia psa,&nbsp;</li>\n<li>Otrzymujesz +1 do zdobycia tropu (jeżeli musisz zapełnić ścieżkę postępu).</li>\n</ul>",
+            "fail": "<p>To nie był tw&oacute;j dzień, coś poszło nie tak, jak zakładałeś.&nbsp;</p>\n<ul>\n<li>Uruchom ścieżkę postępu,&nbsp;</li>\n<li>Otrzymujesz +1 stresu,&nbsp;</li>\n<li>Mistrz gry wybiera z listy jedną konsekwencję lub wykonuje sw&oacute;j ruch.</li>\n</ul>",
+            "options": "",
+            "category": "Śledczy",
+            "roll": "Zmysły"
+        }
+    },
+    {
+        "name": "Techniki komputerowe",
+        "type": "move",
+        "system": {
+            "desc": "<p>Gdy hakujesz komputer lub telefon, odzyskujesz dane z nośnik&oacute;w, na przykład kamer lub dysk&oacute;w twardych, przeszukujesz Internet albo policyjne bazy danych, namierzasz nadajnik czy podsłuchujesz kogoś za pomocą urządzeń szpiegowskich, wykonaj test.</p>",
+            "sukcess": "<p>Otrzymujesz dostęp do danych, kt&oacute;rych szukałeś, i odkrywasz coś więcej.</p>\n<ul>\n<li>Otrzymujesz +1 do szczęścia psa,&nbsp;</li>\n<li>Otrzymujesz +1 do następnego ruchu.</li>\n</ul>",
+            "patrial": "<p>Otrzymujesz dostęp do danych, kt&oacute;rych szukałeś. &nbsp;</p>\n<ul>\n<li>Otrzymujesz +1 do szczęścia psa.</li>\n</ul>",
+            "fail": "<p>Tym razem się nie udało.&nbsp;</p>\n<ul>\n<li>Uruchom ścieżkę postępu,&nbsp;</li>\n<li>Otrzymujesz +1 stresu,&nbsp;</li>\n<li>Mistrz gry wybiera z listy jedną konsekwencję lub wykonuje sw&oacute;j ruch.</li>\n</ul>",
+            "options": [
+                {
+                    "id": "0",
+                    "attribute": "Inteligencja",
+                    "desc": "Gdy korzystasz z własnej wiedzy"
+                },
+                {
+                    "id": "1",
+                    "attribute": "Pagon",
+                    "desc": "Gdy korzystasz z pomocy specjalistów"
+                }
+            ],
+            "category": "Śledczy",
+            "roll": "ask"
+        }
+    },
+    {
+        "name": "Wbrew regułom",
+        "type": "move",
+        "system": {
+            "desc": "<p>Gdy wykonujesz ruch śledczy i deklarujesz jego wykonanie wbrew regułom, przyjmij na siebie stres (maksymalnie +3).</p>",
+            "sukcess": "<p>Wybierz (3 przy +3 stresu, 2 przy +2 stresu i 1 przy +1 stresu):</p>\n<ul>\n<li>Otrzymujesz +2 do szczęścia psa,</li>\n<li>Otrzymujesz +1 do następnego ruchu,</li>\n<li>Otrzymujesz +2 do zdobycia tropu (jeżeli musisz zapełnić ścieżkę postępu).</li>\n</ul>",
+            "patrial": "<p>Wybierz (3 przy +3 stresu, 2 przy +2 stresu i 1 przy +1 stresu):</p>\n<ul>\n<li>Otrzymujesz +2 do szczęścia psa,</li>\n<li>Otrzymujesz +1 do następnego ruchu,</li>\n<li>Otrzymujesz +2 do zdobycia tropu (jeżeli musisz zapełnić ścieżkę postępu).</li>\n</ul>",
+            "fail": "<p>Jeżeli otrzymałeś skuchę, ponieś poważne konsekwencje swojego ruchu. Od początku czułeś, że możesz to spierdolić, i nie ma zaskoczenia. Spierdoliłeś.</p>",
+            "options": "",
+            "category": "Śledczy",
+            "roll": "stress"
+        }
+    },
+    {
+        "name": "Pomóż lub Przeszkodź",
+        "type": "move",
+        "system": {
+            "desc": "<p>Gdy chcesz pom&oacute;c lub przeszkodzić innemu bohaterowi, zał&oacute;ż się o stres (maksymalnie +3) i wykonaj rzut + postawiony stres. Musisz postawić minimalnie +1 stresu.&nbsp;</p>",
+            "sukcess": "<p>Tw&oacute;j plan się powi&oacute;dł.</p>\n<ul>\n<li>Dodaj +2 lub -2 do następnego rzutu bohatera, kt&oacute;remu pomagałeś lub zeszkadzałeś.&nbsp;</li>\n</ul>",
+            "patrial": "<p>Udało się, ale mogło być lepiej.&nbsp;</p>\n<ul>\n<li>Dodaj +1 lub -1 do następnego rzutu bohatera, kt&oacute;remu pomagałeś lub przeszkadzałeś,</li>\n<li>Otrzymujesz tyle stresu, ile postawiłeś w zakładzie.</li>\n</ul>",
+            "fail": "<p>Niech B&oacute;g ma cię w opiece. Przygotuj się na najgorsze.&nbsp;</p>\n<ul>\n<li>Otrzymujesz tyle stresu, ile postawiłeś w zakładzie,&nbsp;</li>\n<li>Mistrz gry wybiera z listy jedną konsekwencję lub wykonuje sw&oacute;j ruch.&nbsp;</li>\n</ul>",
+            "options": "",
+            "category": "Personalny",
+            "roll": "stress"
+        }
+    },
+    {
+        "name": "Konfrontacja",
+        "type": "move",
+        "system": {
+            "desc": "<p>Gdy konfrontujesz się z postacią innego gracza, wykonaj rzut + r&oacute;żnica w stopniach służbowych.&nbsp;</p>",
+            "sukcess": "<p>Jesteś g&oacute;rą, postać innego gracza powinna się zachować w spos&oacute;b, jakiego od niej oczekujesz.&nbsp;</p>\n<ul>\n<li>Jeżeli postać innego gracza zrobi to, czego oczekujesz, otrzymujesz +2 do szczęścia psa.&nbsp;</li>\n<li>Jeżeli postać innego gracza odm&oacute;wi zrobienia tego, czego oczekujesz, gracz ten otrzymuje +1 stresu, a ty 1 punkt doświadczenia.&nbsp;</li>\n</ul>",
+            "patrial": "<p>Jesteś g&oacute;rą, ale nie wszystko między wami zostało wyjaśnione. Postać innego gracza powinna się zachować w spos&oacute;b, jakiego od niej oczekujesz.&nbsp;</p>\n<ul>\n<li>Jeżeli postać innego gracza zrobi to, czego oczekujesz, gracz ten otrzymuje +2 do szczęścia psa jako rekompensatę.&nbsp;</li>\n<li>Jeżeli postać innego gracza odm&oacute;wi zrobienia tego, czego oczekujesz, gracz ten otrzymuje +1 stresu.&nbsp;</li>\n</ul>",
+            "fail": "<p>Coś zazgrzytało w waszej relacji. Gracz, na kt&oacute;rego postać starałeś się wpłynąć, decyduje o tym, co się dzieje w fikcji.</p>\n<ul>\n<li>Jeżeli postać innego gracza zrobi to, czego oczekujesz, gracz ten otrzymuje 1 punkt doświadczenia oraz +2 do szczęścia psa.&nbsp;</li>\n<li>Jeżeli postać innego gracza odm&oacute;wi zrobienia tego, czego oczekujesz, otrzymujesz +1 stresu. &nbsp;</li>\n</ul>",
+            "options": [
+                {
+                    "id": "0",
+                    "attribute": "Pagon",
+                    "desc": "różnica w stopniach służbowych"
+                }
+            ],
+            "category": "Personalny",
+            "roll": "ask"
+        }
+    },
+    {
+        "name": "Policjant wzywa pomocy",
+        "type": "move",
+        "system": {
+            "desc": "<p>Gdy możesz zostać ranny, wykonaj rzut + wybierz z listy:</p>\n<ul>\n<li>Otrzymujesz +1, jeżeli broń jest mała lub mniej groźna,&nbsp;</li>\n<li>Otrzymujesz +1, jeżeli przeciwnik nie jest doświadczony lub nie zamierza cię zabić,&nbsp;</li>\n<li>Otrzymujesz +1, jeżeli masz kamizelkę, stoisz za osłoną, jesteś chroniony.&nbsp;</li>\n</ul>",
+            "sukcess": "<p>&nbsp;To jeszcze nie tw&oacute;j czas. Żyjesz. Wybierz, czy obrywasz niegroźnie, czy nie.</p>",
+            "patrial": "<p>&nbsp;Żyjesz, ale oberwałeś. Wybierz jeden element:</p>\n<ul>\n<li>Rana jest groźna.\n<ol>\n<li>Postać zostaje wyłączona do końca sceny,&nbsp;</li>\n<li>Otrzymujesz +2 stresu.&nbsp;</li>\n</ol>\n</li>\n<li>Rana jest paskudna, po zagojeniu zostanie duża, brzydka blizna.\n<ol>\n<li>Otrzymujesz +2 stresu,&nbsp;</li>\n<li>Otrzymujesz etykietę &bdquo;paskudna blizna -1&rdquo;, kt&oacute;rej nie można usunąć.&nbsp;</li>\n</ol>\n</li>\n<li>Rana jest bolesna. Boli jak jasna cholera.&nbsp;<br>\n<ol>\n<li>Otrzymujesz +2 stresu,&nbsp;</li>\n<li>Otrzymujesz etykietę &bdquo;bolesna rana -2&rdquo;.</li>\n</ol>\n</li>\n</ul>",
+            "fail": "<p>Nie żyjesz. Widzisz światełko w tunelu. Jeżeli chcesz, możesz wykonać ostatnią akcję, nim pogrążysz się w ciemności. Ustal z mistrzem gry, jak wygląda ostatni moment życia bohatera.</p>",
+            "options": "",
+            "category": "Personalny",
+            "roll": "ask"
+        }
+    },
+    {
+        "name": "Po Godzinach",
+        "type": "move",
+        "system": {
+            "desc": "<p>Gdy po pracy podejmujesz pr&oacute;bę regeneracji umysłu i ciała, wykonaj test.</p>",
+            "sukcess": "<p>Wr&oacute;ciłeś na właściwe tory.</p>\n<ul>\n<li>Zredukuj czas pracy do 0.&nbsp;</li>\n</ul>",
+            "patrial": "<p>Twoja regeneracja nie była pełna. Wybierz jeden element:&nbsp;</p>\n<ul>\n<li>Zredukuj czas pracy do 0. Ponieś jedną konsekwencję z listy skuchy.&nbsp;</li>\n<li>Zredukuj czas pracy do 4. Otrzymujesz etykietę &bdquo;przepracowany -1&rdquo;.&nbsp;</li>\n</ul>",
+            "fail": "<p>Nie udało ci się odpocząć. Mistrz gry wybiera z listy jedną konsekwencję lub wykonuje sw&oacute;j ruch.</p>",
+            "options": [
+                {
+                    "id": "0",
+                    "attribute": "Inteligencja",
+                    "desc": "Gdy starasz się zregenerować, wykorzystując hobby"
+                },
+                {
+                    "id": "1",
+                    "attribute": "Zmysły",
+                    "desc": "Gdy starasz się zregenerować, odpoczywając"
+                },
+                {
+                    "id": "2",
+                    "attribute": "Psychika",
+                    "desc": "Gdy starasz się zregenerować, przyjmując leki"
+                },
+                {
+                    "id": "3",
+                    "attribute": "Sprawność",
+                    "desc": "Gdy starasz się zregenerować, uprawiając sport"
+                },
+                {
+                    "id": "4",
+                    "attribute": "Osobowość",
+                    "desc": "Gdy starasz się zregenerować przez socjalizację"
+                }
+            ],
+            "category": "Personalny",
+            "roll": "ask",
+            "options[id]": {
+                "attribute": "Sprawność"
+            }
+        }
+    },
+    {
+        "name": "Przełamanie lodów",
+        "type": "move",
+        "system": {
+            "desc": "<p>Gdy wchodzisz z kimś w bardzo intymną relację, wykonaj test.</p>",
+            "sukcess": "<p>&nbsp;Chemia, kt&oacute;ra wytworzyła się między wami, jest bardzo silna.</p>\n<ul>\n<li>Zadaj dwa pytania:\n<ol>\n<li>Kłamiesz? &nbsp;</li>\n<li>Jak się teraz czujesz? &nbsp;</li>\n<li>Co zamierzasz zrobić? &nbsp;</li>\n<li>Co chcesz, żebym ja zrobił? &nbsp;</li>\n<li>Jak mogę sprawić, byś&hellip;?&nbsp;</li>\n</ol>\n</li>\n<li>Jeżeli masz z tą osobą znajomość lub więź, podnieś ją o +1.</li>\n</ul>",
+            "patrial": "<p>Nawiązaliście specyficzny, intymny kontakt. Zadaj jedno pytanie</p>\n<ol>\n<li>Kłamiesz? &nbsp;</li>\n<li>Jak się teraz czujesz? &nbsp;</li>\n<li>Co zamierzasz zrobić? &nbsp;</li>\n<li>Co chcesz, żebym ja zrobił? &nbsp;</li>\n<li>Jak mogę sprawić, byś&hellip;?&nbsp;</li>\n</ol>",
+            "fail": "<p>Zdradzasz swoją motywację osobie, kt&oacute;rej intencje usiłujesz poznać. Powiedz mistrzowi gry, jakie twoja postać ma intencje.&nbsp;</p>\n<ul>\n<li>Otrzymujesz +1 stresu,&nbsp;</li>\n<li>Mistrz gry wybiera z listy jedną konsekwencję lub wykonuje sw&oacute;j ruch.</li>\n</ul>",
+            "options": [
+                {
+                    "id": "0",
+                    "attribute": "Sprawność",
+                    "desc": "Gdy pijesz z kimś wódkę"
+                },
+                {
+                    "id": "1",
+                    "attribute": "Zmysły",
+                    "desc": "Gdy zażywasz z kimś narkotyki"
+                },
+                {
+                    "id": "2",
+                    "attribute": "Osobowość",
+                    "desc": "Gdy uprawiasz z kimś seks"
+                }
+            ],
+            "category": "Personalny",
+            "roll": "ask"
+        }
+    },
+    {
+        "name": "Stań oko w oko z horrorem",
+        "type": "move",
+        "system": {
+            "desc": "<p>Gdy jesteś świadkiem czegoś przerażającego lub mierzysz się ze śmiercią bliskiej osoby, wykonaj rzut + psychika.</p>",
+            "sukcess": "<p>Jesteś zimny jak stal, może nawet doświadczenie to uczyniło cię silniejszym.</p>\n<ul>\n<li>Otrzymujesz +1 do szczęścia psa.</li>\n</ul>",
+            "patrial": "<p>Jakoś się trzymasz, ale to, czego byłeś świadkiem, odciska na tobie piętno. Wybierz jeden element:</p>\n<ul>\n<li>Otrzymujesz +1 stresu,</li>\n<li>Wybierz jedną konsekwencję z listy skuchy.&nbsp;</li>\n</ul>",
+            "fail": "<p>Przerasta cię to. Ogarnia cię niemoc, wymiotujesz lub dostajesz ataku paniki.</p>\n<ul>\n<li>Otrzymujesz +2 stresu,&nbsp;</li>\n<li>Mistrz gry wybiera z listy jedną konsekwencję lub wykonuje sw&oacute;j ruch.&nbsp;</li>\n</ul>",
+            "options": "",
+            "category": "Personalny",
+            "roll": "Psychika"
+        }
+    },
+    {
+        "name": "Wyrzuć z siebie stress",
+        "type": "move",
+        "system": {
+            "desc": "<p>Gdy dochodzi do tego, że odreagowujesz nagromadzony stres, wykonaj test.</p>",
+            "sukcess": "<p>To, co zrobiłeś, pomogło ci.&nbsp;</p>\n<ul>\n<li>Zredukuj stres do 0.&nbsp;</li>\n</ul>",
+            "patrial": "<p>Twoje doświadczenia nie były wystarczająco silne, by uwolnić cię od wszystkich demon&oacute;w, albo pokazałeś, że jesteś egoistą. Wybierz jeden element:&nbsp;</p>\n<ul>\n<li>Obniż stres o -1. &nbsp;</li>\n<li>Zredukuj stres do 0, ale obniż jedną więź o -1</li>\n</ul>",
+            "fail": "<p>Zatracasz się w swojej przyjemności, co ma poważne konsekwencje. Ustal z mistrzem gry, co dokładnie się wydarzyło.</p>\n<ul>\n<li>Obniż jedną więź o -1,</li>\n<li>Mistrz gry wybiera z listy jedną konsekwencję lub wykonuje sw&oacute;j ruch.</li>\n</ul>",
+            "options": [
+                {
+                    "id": "0",
+                    "attribute": "Inteligencja",
+                    "desc": "Gdy starasz się pozbyć stresu, uprawiając hazard"
+                },
+                {
+                    "id": "1",
+                    "attribute": "Zmysły",
+                    "desc": "Gdy starasz się pozbyć stresu, odurzając się lub przebywając w samotności"
+                },
+                {
+                    "id": "2",
+                    "attribute": "Psychika",
+                    "desc": "Gdy starasz się pozbyć stresu, wykorzystując wiarę lub przemoc psychiczną"
+                },
+                {
+                    "id": "3",
+                    "attribute": "Sprawność",
+                    "desc": "Gdy starasz się pozbyć stresu przez ryzykowanie lub przemoc fizyczną"
+                },
+                {
+                    "id": "4",
+                    "attribute": "Osobowość",
+                    "desc": "Gdy starasz się pozbyć stresu, korzystając z przyjemności lub terapii"
+                }
+            ],
+            "category": "Personalny",
+            "roll": "ask"
+        }
+    },
+    {
+        "name": "Wystaw więź na próbę",
+        "type": "move",
+        "system": {
+            "desc": "<p>Gdy twoja znajomość lub więź zostaje zaangażowana w istotne wydarzenia w fikcji,&nbsp;wykonaj test.</p>",
+            "sukcess": "<p>Twoja znajomość lub więź została wzmocniona.&nbsp;</p>\n<ul>\n<li>Otrzymujesz +1 do znajomości lub więzi.</li>\n</ul>",
+            "patrial": "<p>Twoja znajomość lub więź jest zagrożona i musisz udowodnić, że warto ją podtrzymać. Jeżeli odm&oacute;wisz, otrzymujesz -1 do znajomości lub więzi.</p>",
+            "fail": "<p>Prawdziwych przyjaci&oacute;ł poznaje się w biedzie. Niestety tym razem jest inaczej.&nbsp;</p>\n<ul>\n<li>Otrzymujesz +1 do stresu,&nbsp;</li>\n<li>Otrzymujesz -1 do znajomości lub więzi,&nbsp;</li>\n<li>Mistrz gry wybiera z listy jedną konsekwencję lub wykonuje sw&oacute;j ruch</li>\n</ul>",
+            "options": [
+                {
+                    "id": "0",
+                    "attribute": "Psychika",
+                    "desc": "Gdy znajomość lub więź zostaje wystawiona na poważną próbę w przypadku  konfliktu, zdrady lub zbiegu niekorzystnych przypadków"
+                },
+                {
+                    "id": "1",
+                    "attribute": "Osobowość",
+                    "desc": "Gdy próbujesz naprawić znajomość lub więź"
+                }
+            ],
+            "category": "Personalny",
+            "roll": "ask"
+        }
+    },
+    {
+        "name": "Zmierz się ze słabością",
+        "type": "move",
+        "system": {
+            "desc": "<p>Gdy stawiasz czoło swojej słabości, wykonaj test.</p>",
+            "sukcess": "<p>Wygrywasz ze swoją słabością.</p>",
+            "patrial": "<p>Tym razem wygrywasz ze swoją słabością, ale nie było to łatwe.&nbsp;</p>\n<ul>\n<li>Otrzymujesz +1 stresu.</li>\n</ul>",
+            "fail": "<p>&nbsp;Słabość bierze nad tobą g&oacute;rę i rośnie.&nbsp;</p>\n<ul>\n<li>Otrzymujesz +1 stresu,</li>\n<li>Mistrz gry wybiera z listy jedną konsekwencję lub wykonuje sw&oacute;j ruch</li>\n</ul>",
+            "options": [
+                {
+                    "id": "0",
+                    "attribute": "Inteligencja",
+                    "desc": "Gdy słabość jest powiązana z inteligencją postaci"
+                },
+                {
+                    "id": "1",
+                    "attribute": "Osobowość",
+                    "desc": "Gdy słabość jest powiązana z osobowością postaci"
+                },
+                {
+                    "id": "2",
+                    "attribute": "Psychika",
+                    "desc": "Gdy słabość jest powiązana z siłą woli postaci"
+                },
+                {
+                    "id": "3",
+                    "attribute": "Sprawność",
+                    "desc": "Gdy słabość jest powiązana z fizycznością postaci"
+                },
+                {
+                    "id": "4",
+                    "attribute": "Zmysły",
+                    "desc": "Gdy słabość jest powiązana ze zmysłami postaci"
+                }
+            ],
+            "category": "Personalny",
+            "roll": "ask"
+        }
+    }
+]

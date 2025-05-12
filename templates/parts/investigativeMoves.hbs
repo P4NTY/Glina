@@ -1,0 +1,25 @@
+<li class="move" data-cat="Śledczy" data-move="{{name}}" data-item-id="{{_id}}">
+    <div class="header">
+        <div class="buttons">
+            <button class="roll">
+                <i class="fas fa-dice"></i>
+            </button>
+            <button class="chat">
+                <i class="fas fa-comments"></i>
+            </button>
+        </div>
+        <p>{{name}}</p>
+        <p
+            data-value="{{attributeValue}}"
+            data-name="{{attributeName}}"
+        >{{#loop attributeValue}}<i class="fa-solid fa-star"></i>{{/loop}}</p>
+    </div>
+    <div class="desc">{{{system.desc}}}</div>
+    <div class="dialog">
+        {{#each system.options  as |option id|}}
+        <div class="option">
+            <strong>{{#if (isEqual option.attribute "Pagon")}}Stopień Służbowy{{else}}{{option.attribute}}{{/if}}</strong> - {{option.desc}}
+        </div>
+        {{/each}}
+    </div>
+</li>

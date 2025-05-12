@@ -1,0 +1,35 @@
+<li class="move" data-cat="{{system.category}}" data-item-id="{{_id}}">
+    <div class="header">
+        <div class="buttons">
+            {{#if (isNotEqual system.roll "none")}}
+                <button class="roll">
+                    <i class="fas fa-dice"></i>
+                </button>
+            {{/if}}
+            <button class="chat">
+                <i class="fas fa-comments"></i>
+            </button>
+        </div>
+        <p class="name"> {{name}} </p>
+        <div>
+            {{#if (isEqual system.category "Archetyp")}}
+            <button class="item-delete">
+                <i class="fas fa-minus"></i>
+            </button>
+            <button class="item-edit">
+                <i class="fas fa-edit"></i>
+            </button>
+            {{/if}}
+        </div>
+    </div>
+    <div class="description">
+        {{{system.desc}}}
+    </div>
+    <div class="dialog">
+        {{#each system.options  as |option id|}}
+        <div class="option">
+            <strong>{{#if (isEqual option.attribute "Pagon")}}Stopień Służbowy{{else}}{{option.attribute}}{{/if}}</strong> - {{option.desc}}
+        </div>
+        {{/each}}
+    </div>
+</li>

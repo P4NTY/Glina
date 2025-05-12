@@ -1,0 +1,75 @@
+{
+    "Actor": {
+        "types": ["officer", "podejrzany", "dowód"],
+        "officer": {
+            "archetype": "",
+            "pagonName": "Posterunkowy",
+            "activeTabs": "Ruchy",
+            "look": {
+                "face": "",
+                "hair": "",
+                "figure": "",
+                "other": ""
+            },
+            "desc": {
+                "partner": "",
+                "kids": "",
+                "parents": "",
+                "state": "",
+                "importantPlace": "",
+                "weakness": ""
+            },
+            "trackers": {
+                "luck": 0,
+                "stress": 0,
+                "hour": 0,
+                "hold": 0,
+                "PD": 0
+            },
+            "attributes": {
+                "Inteligencja": 1,
+                "Osobowość": 1,
+                "Psychika": 1,
+                "Sprawność": 1,
+                "Zmysły": 1,
+                "Pagon": 0
+            },
+            "investigativeMoves": {
+                "komunikacja_interpersonalna": 1,
+                "książka_telefoniczna": 1,
+                "pomoc_specjalistów": 1,
+                "praca_operacyjno-rozpoznawcza": 1,
+                "przemoc": 1,
+                "robienie_w_wała": 1,
+                "robota_papierkowa": 1,
+                "techniki_komputerowe": 1
+            },
+            "notes": ""
+        }
+    },
+    "Item": {
+        "types": ["move", "label", "relation", "item"],
+        "templates": {
+        },
+        "move": {
+            "desc": "",
+            "sukcess": "",
+            "patrial": "",
+            "fail": "",
+            "options": [],
+            "category": "",
+            "roll": ""
+        },
+        "relation": {
+            "value": 0,
+            "desc": ""
+        },
+        "label": {
+            "name": "",
+            "value": 0,
+            "desc": "",
+            "maxValue": null,
+            "minValue": null
+        }
+    }
+}

@@ -1,0 +1,54 @@
+<form class="moveCard" autocomplete="off">
+    <h1>
+        <input type="text" name="name" value="{{item.name}}">
+    </h1>
+    <div class="types">
+        <p>Sposób rzutu: </p>
+        <select name="system.roll">
+            <option value="none" {{#if (isEqual system.roll "none")}}selected{{/if}}>Brak</option>
+            <option value="ask" {{#if (isEqual system.roll "ask")}}selected{{/if}}>Zapytaj</option>
+            <option value="Inteligencja" {{#if (isEqual system.roll "Inteligencja")}}selected{{/if}}>Inteligencja</option>
+            <option value="Osobowość" {{#if (isEqual system.roll "Osobowość")}}selected{{/if}}>Osobowość</option>
+            <option value="Psychika" {{#if (isEqual system.roll "Psychika")}}selected{{/if}}>Psychika</option>
+            <option value="Sprawność" {{#if (isEqual system.roll "Sprawność")}}selected{{/if}}>Sprawność</option>
+            <option value="Zmysły" {{#if (isEqual system.roll "Zmysły")}}selected{{/if}}>Zmysły</option>
+            <option value="Pagon" {{#if (isEqual system.roll "Pagon")}}selected{{/if}}>Stopień Służby</option>
+            <option value="stress" {{#if (isEqual system.roll "stress")}}selected{{/if}}>Postaw Stres</option>
+        </select>
+    </div>
+    {{editor system.desc target="system.desc" button=true owner=owner editable=editable}}
+    {{#if (isEqual system.roll "ask")}}
+    <div>
+        <h3>Opcje</h3>
+        {{#each system.options as |option id|}}
+        <div class="option" data-id="{{option.id}}">
+            <select name="option.attribute">
+                <option value="Inteligencja" {{#if (isEqual option.attribute "Inteligencja")}}selected{{/if}}>Inteligencja</option>
+                <option value="Osobowość" {{#if (isEqual option.attribute "Osobowość")}}selected{{/if}}>Osobowość</option>
+                <option value="Psychika" {{#if (isEqual option.attribute "Psychika")}}selected{{/if}}>Psychika</option>
+                <option value="Sprawność" {{#if (isEqual option.attribute "Sprawność")}}selected{{/if}}>Sprawność</option>
+                <option value="Zmysły" {{#if (isEqual option.attribute "Zmysły")}}selected{{/if}}>Zmysły</option>
+                <option value="Pagon" {{#if (isEqual option.attribute "Pagon")}}selected{{/if}}>Stopień Służby</option>
+            </select>
+            <input type="text" name="option.desc" value="{{option.desc}}">
+            <button class="remove"><i class="fa-solid fa-minus"></i></button>
+        </div>
+        {{/each}}
+        <button class="add"><i class="fa-solid fa-plus"></i></button>
+    </div>
+    {{/if}}
+    {{#if (isNotEqual system.roll "none")}}
+    <div class="sukcess">
+        <h3>Triumf</h3>
+        {{editor system.sukcess target="system.sukcess" button=true owner=owner editable=editable}}
+    </div>
+    <div class="patrial">
+        <h3>Fuks</h3>
+        {{editor system.patrial target="system.patrial" button=true owner=owner editable=editable}}
+    </div>
+    <div class="fail">
+        <h3>Skucha</h3>
+        {{editor system.fail target="system.fail" button=true owner=owner editable=editable}}
+    </div>
+    {{/if}}
+</form>

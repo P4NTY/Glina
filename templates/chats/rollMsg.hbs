@@ -1,0 +1,15 @@
+{{#if (isEqual result "Skucha")}} <span class="bad"></span> {{/if}}
+{{#if (isEqual result "Fuks")}} <span class="mixed"></span> {{/if}}
+{{#if (isEqual result "Triumf")}} <span class="good"></span> {{/if}}
+<h2>{{name}}</h2>
+{{!-- {{{moveDesc}}} --}}
+<h4 class="rolls">
+    {{roll}}
+</h4>
+{{#if moveOption}} <p>{{{moveOption}}}</p> {{/if}}
+<div>
+    <h3>{{result}}{{#if isDublet}} - Dublet❗{{/if}}</h3>
+</div>
+<div class="description">
+    {{{resultDesc}}}
+</div>

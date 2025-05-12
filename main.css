@@ -1,0 +1,918 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&display=swap');
+@keyframes animKogut {
+    0% { 
+        opacity: 0;
+    }
+    100% { 
+        opacity: 1;
+    }
+  }
+  
+  
+  figure#pause::after,
+  figure#pause::before {
+      content: '';
+      width: 600px;
+      height: 200px;
+      display: block;
+      position: absolute;
+      top: 0;
+      filter: blur(500px);
+      box-shadow: 0 0 10px white;
+  }
+  
+  figure#pause::before {
+      left: 200px;
+      background: red;
+      animation: animKogut 0.6s ease 0s infinite normal both; 
+  }
+  
+  figure#pause::after {
+      right: 400px;
+      background: blue;
+      animation: animKogut 0.6s ease 0s infinite reverse both; 
+  }
+  
+  
+
+form:has(.officerCard) {
+    overflow: hidden;
+}
+
+.officerCard .description * {
+    font-size: small
+}
+
+.officerCard .move button,
+.officerCard .moves button.item-add {
+    width: min-content;
+}
+
+.officerCard input {
+    font-family: "Playwrite DK Loopet", cursive;
+}
+
+.officerCard button {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.window-content:has(.officerCard) .trackers button {
+    background: #2878c1;
+    color: white;
+    border: 0;
+}
+
+.moveCard .option {
+    display: flex
+}
+
+.moveCard .option button.remove {
+    width: 30px;
+    height: 27px
+}
+
+.officerCard .moves li .header {
+    display: flex;
+    justify-content: space-between
+}
+
+.moves li>ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 40px
+}
+
+.officerCard .attributes div {
+    padding: 5px 0
+}
+
+.officerCard .attributes tr>td:first-child {
+    width: 100px
+}
+
+.officerCard .hour {
+    height: 168px
+}
+
+.officerCard .investigativeMoves button {
+    font-size: 14px;
+    padding: 0;
+    border-radius: 5px
+}
+
+.officerCard .investigativeMoves tr>td:first-child {
+    width: 200px;
+    padding: 0
+}
+
+.officerCard .investigativeMoves tr>td:nth-child(2) {
+    text-align: center
+}
+
+.officerCard .luck {
+    height: 280px
+}
+
+.officerCard .name_add {
+    display: flex;
+    justify-content: space-around
+}
+
+.officerCard .name_add button {
+    width: 40px
+}
+
+.officerCard .name_add h3 {
+    flex-grow: 1
+}
+
+.officerCard .notes {
+    padding: 10px;
+    margin: 0;
+    background: linear-gradient(rgb(240 241 255) 2.8px, transparent 2.8px), linear-gradient(90deg, rgb(255 255 255) 2.8px, transparent 2.8px), linear-gradient(rgb(238 238 255) 1.4px, transparent 1.4px), linear-gradient(90deg, rgb(255 255 255) 1.4px, rgb(255 255 255) 1.4px);
+    background-size: 70px 70px, 70px 70px, 14px 14px, 14px 14px;
+    background-position: -2.8px -2.8px, -2.8px -2.8px, -1.4px -1.4px, -1.4px -1.4px;
+}
+
+.officerCard .stress {
+    height: 126px
+}
+
+.window-content:has(.officerCard) .trackers {
+    position: absolute;
+    width: min-content;
+    right: -40px;
+    top: 0;
+    bottom: 0
+}
+
+.window-content:has(.officerCard) .trackers>div {
+    position: sticky;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    gap: 15px;
+    padding-bottom: 20px;
+}
+
+.window-content:has(.officerCard) .trackers>div>div {
+    display: flex;
+    gap: 2px;
+    flex-direction: column
+}
+
+.window-content:has(.officerCard) .trackers>div input {
+    display: none
+}
+
+.window-content:has(.officerCard) .trackers>div input:checked~label {
+    background: lightgray
+}
+
+.window-content:has(.officerCard) .trackers>div input:checked+label {
+    background: #2878c1;
+    position: relative;
+    font-size: 14px;
+    color: white;
+}
+
+.window-content:has(.officerCard) .trackers>div label {
+    display: inline-block;
+    width: 30px;
+    border: 1px solid;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 0;
+    transition: font-size .2s linear;
+    cursor: pointer;
+}
+
+.window-content:has(.officerCard) .trackers>div label:hover {
+    font-size: 14px
+}
+
+.window-content:has(.officerCard) .trackers i {
+    text-align: center;
+    font-size: 20px;
+}
+
+.officerCard article.bio {
+    display: grid;
+    grid-template-areas:
+        "p attributes attributes"
+        "p archetype archetype"
+        "p w r"
+        "p weak weak"
+        "p place place";
+    grid-template-columns: 30%;
+    /* gap: 5px 0px; */
+}
+
+.officerCard button>i {
+    margin: 0;
+    padding: 0
+}
+
+.officerCard button:has(i) {
+    position: relative
+}
+
+.officerCard h1>input {
+    border: none;
+    border-bottom: 2px dotted
+}
+
+.officerCard input[type="text"], .labels input[type="text"] {
+    border: none;
+    border-bottom: 2px dotted #000;
+    color: #444;
+}
+
+.officerCard section>p {
+    display: flex
+}
+
+.officerCard section>p>label {
+    white-space: nowrap;
+    padding-right: 5px
+}
+
+.officerCard section.attributes {
+    grid-area: attributes
+}
+
+.officerCard section.attributes p {
+    text-align: center;
+    margin: 0
+}
+
+.officerCard section.attributes tr>td:nth-child(2) {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row
+}
+
+.officerCard section.attributes tr>td:nth-child(2)>div {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #87ceeb;
+    border: 1px solid;
+    border-radius: 50%
+}
+
+.officerCard section.nav {
+    position: relative;
+    grid-area: p;
+    background: white;
+}
+
+.officerCard section.nav h1 {
+    position: absolute;
+    bottom: 5px;
+    backdrop-filter: blur(5px);
+    margin: 0;
+    left: 0;
+    right: 0;
+    background: #fff8
+}
+
+.tox.tox-tinymce,
+.editor {
+    min-height: 200px
+}
+
+.window-content:has(.officerCard) {
+    padding: 0
+}
+
+.officerCard {
+    flex-direction: column;
+}
+
+h3 {
+    margin: 0
+}
+
+li.add {
+    display: flex;
+    width: 150px;
+    height: 100px
+}
+
+li.add button {
+    background: transparent;
+    border-radius: 20px;
+    border: 15px solid #0005;
+    font-size: 24px;
+    color: #0003;
+    width: 100%;
+    height: 100%;
+}
+
+li.add button:hover {
+    border: 15px solid #000c;
+    color: #000c
+}
+
+li.label,
+li.relation {
+    width: 200px;
+    display: inline-block;
+    border: 0;
+    border-radius: 3px;
+    background: linear-gradient(#F9EFAF, #F7E98D);
+    box-shadow: 0 4px 6px #0000001a;
+    padding: 5px
+}
+
+li.move {
+    position: relative;
+    border: 1px solid gray;
+    display: block;
+    margin: 5px;
+    background: white;
+    border-radius: 5px;
+}
+
+li.move button {
+    padding: 2px 5px;
+    margin: 0
+}
+
+li.relation {
+    position: relative;
+    padding: 0;
+    min-height: 150px;
+    transition: all .2s linear;
+    cursor: pointer;
+}
+
+li.relation>button {
+    top: -15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    right: -15px;
+    background: red;
+    transition: opacity .2s linear
+}
+
+li.relation>button:hover {
+    opacity: 1
+}
+
+li.relation>div {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: #fffA;
+    padding: 5px;
+    backdrop-filter: blur(5px);
+    max-height: 33%;
+    overflow: hidden;
+}
+
+li.relation>p {
+    top: 15px;
+    transform: rotate(-35deg);
+    font-weight: 700;
+    width: min-content;
+    left: 5px
+}
+
+li.relation>p,
+li.relation>div,
+li.relation>button {
+    position: absolute
+}
+
+li.relation.withImg>p {
+    color: #fff;
+    text-shadow: 0 0 2px #000
+}
+
+
+li.relation:nth-child(even) {
+    transform: rotate(-5deg)
+}
+
+li.relation:nth-child(odd) {
+    transform: rotate(5deg)
+}
+
+li.relation:hover {
+    transform: rotate(0deg) scale(1.2);
+    z-index: 1
+}
+
+ol.relations {
+    display: grid;
+    grid-template-areas:
+        ". . .";
+    justify-items: center;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px 0;
+    margin: 0;
+    min-height: 400px;
+    background: wheat;
+}
+
+.labels ol {
+    display: grid;
+    grid-template-areas: ". . .";
+    justify-items: center;
+    align-items: center;
+    justify-content: space-around;
+    grid-gap: 20px;
+}
+
+section.attributes>div,
+section.investigativeMoves>div {
+    background: #fff;
+    color: #2878c1;
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 2px;
+    align-items: center;
+    flex-grow: 1;
+    font-size: small
+}
+
+section.attributes>div:nth-child(odd),
+section.investigativeMoves>div:nth-child(odd) {
+    background: #2878c1;
+    color: #fff
+}
+
+section.attributes p,
+section.investigativeMoves p {
+    text-align: center
+}
+
+section.attributes,
+section.investigativeMoves {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    height: 40px;
+    border: 1px solid;
+}
+
+section.tabs {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    align-content: stretch;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+section.tabs>label {
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px;
+    opacity: .5;
+    font-size: large;
+    cursor: pointer;
+}
+
+section.tabs input {
+    display: none
+}
+
+section.tabs label:has(input:checked) {
+    opacity: 1;
+    font-weight: bold;
+}
+
+section.tabs label:nth-child(even) {
+    background: white;
+}
+
+section.tabs label:nth-child(odd) {
+    background: #2878c1;
+    color: #fff
+}
+
+section.trackers p {
+    text-align: center;
+    margin: 0;
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+    font-family: 'Bruno Ace';
+    font-style: italic;
+}
+
+li.move[data-cat="Śledczy"] p[data-value]:not([data-name="wbrew_regułom"]) {
+    width: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #2878c1;
+    color: white;
+    margin: 0;
+    cursor: pointer;
+}
+
+.archetype ul,
+section.moves.investigate ul {
+    display: grid;
+    grid-template-areas:
+        ". .";
+    padding: 0;
+    margin: 0;
+}
+
+.archetype .move div {
+    display: flex;
+}
+
+.archetype .move .name {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.moves.personal>ul {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+        ". .";
+}
+
+section.window-content:has(.officerCard) {
+    overflow: visible;
+    position: relative;
+    height: 900px;
+}
+
+.officerCard {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: linear-gradient(rgba(201, 204, 255, 0.3) 2.8px, transparent 2.8px), linear-gradient(90deg, rgba(201, 204, 255, 0.3) 2.8px, transparent 2.8px), linear-gradient(rgba(201, 204, 255, 0.3) 1.4px, transparent 1.4px), linear-gradient(90deg, rgba(201, 204, 255, 0.3) 1.4px, rgba(229, 229, 247, 0.3) 1.4px);
+    background-size: 70px 70px, 70px 70px, 14px 14px, 14px 14px;
+    background-position: -2.8px -2.8px, -2.8px -2.8px, -1.4px -1.4px, -1.4px -1.4px;
+}
+
+.labels {
+    position: absolute;
+    top: 0;
+    right: calc(100% + 5px);
+}
+
+.labels ol {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.bio .archetype {
+    grid-area: archetype;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+section.weakness {
+    grid-area: weak;
+}
+
+section.importantPlace {
+    grid-area: place;
+}
+
+.label .buttons {
+    display: flex
+}
+
+.label .labelData {
+    display: flex;
+    gap: 5px;
+    padding: 5px 0;
+}
+
+.label .labelData input[type="number"] {
+    width: 35px;
+    padding: 5px;
+}
+
+.label button.item-delete {
+    width: 30px;
+}
+
+li.chat-message.message.flexcol:has(.good) {
+    background: linear-gradient(#aff9b3, #8df792);
+}
+
+li.chat-message.message.flexcol:has(.mixed) {
+    background: linear-gradient(#F9EFAF, #F7E98D);
+}
+
+li.chat-message.message.flexcol:has(.bad) {
+    background: linear-gradient(#f9afaf, #f78d8d);
+}
+
+.archetype li.add {
+    width: 100%;
+    height: fit-content;
+    padding: 5px 20px;
+}
+
+.archetype li.add button {
+    border: 5px solid;
+}
+
+.label button.item-edit {
+    flex-grow: 1;
+}
+
+li.move :is(.desc, .description) {
+    padding: 0 5px;
+}
+
+article.bio > div:not(.archetype) {
+    background: white;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.header p {
+    font-weight: bold;
+}
+
+article.bio > :is(.archetype, .weakness) {
+    background: #2878c1;
+    color: white;
+}
+
+article.bio > :is(.archetype, .weakness) input {
+    color: white
+}
+
+article.bio > .importantPlace {
+    background: white;
+}
+
+article.bio :is(.importantPlace, .weakness) {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.importantPlace h3 {
+    text-wrap: nowrap;
+}
+
+article.bio > *:not(.nav, .attributes) {
+    padding: 5px;
+}
+
+li.chat-message {
+    background: linear-gradient(rgb(240 241 255) 2.8px, transparent 2.8px), linear-gradient(90deg, rgb(255 255 255) 2.8px, transparent 2.8px), linear-gradient(rgb(238 238 255) 1.4px, transparent 1.4px), linear-gradient(90deg, rgb(255 255 255) 1.4px, rgb(255 255 255) 1.4px);
+    background-size: 70px 70px, 70px 70px, 14px 14px, 14px 14px;
+    background-position: -2.8px -2.8px, -2.8px -2.8px, -1.4px -1.4px, -1.4px -1.4px;
+}
+
+ol#chat-log {
+    background: radial-gradient(rgb(180 180 199) 3px, transparent 4px), radial-gradient(rgb(213 214 244) 4px, rgb(255, 255, 255) 6px);
+    background-size: 40px 40px;
+    background-position: 0px 0px, 20px 20px;
+}
+
+div#chat-controls {
+    padding: 5px 0;
+    color: white
+}
+#chat-controls .roll-type-select,
+textarea#chat-message {
+    background: white
+}
+
+.window-app .window-content {
+    padding: 0;
+    background: white;
+}
+
+.options {
+    padding: 10px;
+}
+
+.dialogAsk p {
+    padding: 5px;
+    background: #2878c1;
+    color: white;
+    margin: 0;
+}
+
+.dialog:has(.dialogAsk) .dialog-button.submit.default.bright {
+    background: #2878c1;
+    color: white;
+}
+
+.moveCard .types {
+    display: flex;
+    gap: 20px;
+    align-content: center;
+    align-items: center;
+}
+
+form.relation .desc{
+    display: flex;
+    align-items: flex-start;
+    background: linear-gradient(#F9EFAF, #F7E98D);
+}
+
+form.relation .img {
+    min-width: 30%;
+}
+
+.dialog-content,
+form.relation,
+form.label {
+    background: linear-gradient(rgb(240 241 255) 2.8px, transparent 2.8px), linear-gradient(90deg, rgb(255 255 255) 2.8px, transparent 2.8px), linear-gradient(rgb(238 238 255) 1.4px, transparent 1.4px), linear-gradient(90deg, rgb(255 255 255) 1.4px, rgb(255 255 255) 1.4px);
+    background-size: 70px 70px, 70px 70px, 14px 14px, 14px 14px;
+    background-position: -2.8px -2.8px, -2.8px -2.8px, -1.4px -1.4px, -1.4px -1.4px;
+}
+form.relation .nav,
+form.label > div:first-child {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: #2878c1;
+    color: white;
+}
+form.relation .nav input,
+form.label > div:first-child input {
+    height: 40px;
+    text-align: center;
+}
+form.relation .nav input[type="number"],
+form.label > div:first-child input[type="number"] {
+    width: 40px;
+    border-radius: 10px;
+    border-color: black
+}
+form.relation .nav input[type="text"],
+form.label > div:first-child input[type="text"] {
+    border: 0;
+    border-bottom: 2px dotted black;
+    font-weight: bold;
+    font-size: 28px;
+}
+form.relation .editor,
+form.label .editor {
+    padding: 10px;
+}
+
+li.label button {
+    background: transparent;
+    border: 0;
+}
+
+li.relation input.relation-value {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background: #2878c1;
+    color: white;
+    left: 90%;
+    top: 30%;
+    font-size: 20px;
+}
+
+.labels input[type="number"] {
+    text-align: center;
+}
+
+form.moveCard h1 > input {
+    padding: 20px;
+    border: none;
+}
+
+form.moveCard .editor {
+    padding: 5px 10px;
+    border: none;
+}
+
+form.moveCard h3 {
+    padding: 0 20px;
+}
+
+form.moveCard .types {
+    padding: 0 15px;
+}
+
+.tabs label.item-add {
+    font-style: italic;
+}
+
+li.move .dialog {
+    position: absolute;
+    display: none;
+    background: linear-gradient(#F9EFAF, #F7E98D);
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+    z-index: 1;
+    bottom: 0;
+}
+
+.moves .move:nth-child(even) .dialog {
+    left: calc(-90% - 5px);
+}
+.moves .move:nth-child(odd) .dialog {
+    right: calc(-90% - 5px);
+}
+
+.window-content:has(.officerCard) .trackers .stress input:nth-child(-n + 6):checked~label,
+.window-content:has(.officerCard) .trackers .hour input:nth-child(-n + 8):checked~label {
+    background: orange;
+}
+.window-content:has(.officerCard) .trackers .stress input:nth-child(-n + 2):checked~label,
+.window-content:has(.officerCard) .trackers .hour input:nth-child(-n + 4):checked~label {
+    background: #ad1845;
+}
+
+.luck {
+    position: relative;
+    height: 280px;
+}
+.stress {
+    position: relative;
+    height: 130px;
+}
+.hour {
+    position: relative;
+    height: 170px;
+}
+
+.luck:hover::before,
+.stress:hover::before,
+.hour:hover::before {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    position: absolute;
+    left: 100%;
+    padding: 5px;
+    background: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.luck:hover::before {
+    content: "Szczęście PSA"
+}
+
+.stress:hover::before {
+    content: "Stres"
+}
+
+.hour:hover::before {
+    content: "Godziny Pracy"
+}
+
+.message-content :is(h1,h2,h3,h4){
+    color: #444;
+    margin: 0;
+}
+
+.message-content h2 {
+    font-family: "Playwrite DK Loopet", cursive;
+    font-size: 1.2em;
+}
+
+.message-content h3 {
+    font-family: "Playwrite DK Loopet", cursive;
+    font-size: 1.5em;
+}
+
+.message-content h4 {
+    font-size: 1em;
+    font-weight: normal;
+}
