@@ -9,16 +9,16 @@
         "url": "https://github.com/P4NTY/"
       }
     ],
-    "version": "0.1",
+    "version": "0.2",
     "compatibility": {
-      "minimum": 11,
-      "verified": 12,
+      "minimum": 12,
+      "verified": 13,
       "maximum": 13
     },
     "esmodules": [ "main.js" ],
     "styles": ["main.css" ],
     "url": "",
-    "background": "",
+    "background": "systems/glina/assets/cover.png",
     "manifest": "",
     "download": ""
   }
