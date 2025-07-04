@@ -17,8 +17,8 @@
     },
     "esmodules": [ "main.js" ],
     "styles": ["main.css" ],
-    "url": "",
+    "url": "https://github.com/P4NTY/Glina",
     "background": "systems/glina/assets/cover.png",
-    "manifest": "",
-    "download": ""
+    "manifest": "https://github.com/P4NTY/Glina/releases/latest/download/system.json",
+    "download": "https://github.com/P4NTY/Glina/releases/download/0.2/glina.zip"
   }
