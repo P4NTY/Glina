@@ -145,44 +145,15 @@
         </div>
         <div class="luck">
             <i class="fa-solid fa-clover"></i>
-            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck+10" value="10" {{#if (isEqual system.trackers.luck 10) }}checked{{/if}}/><label for="{{actor._id}}_luck+10">10</label>
-            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck+9" value="9" {{#if (isEqual system.trackers.luck 9) }}checked{{/if}}/><label for="{{actor._id}}_luck+9">9</label>
-            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck+8" value="8" {{#if (isEqual system.trackers.luck 8) }}checked{{/if}}/><label for="{{actor._id}}_luck+8">8</label>
-            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck+7" value="7" {{#if (isEqual system.trackers.luck 7) }}checked{{/if}}/><label for="{{actor._id}}_luck+7">7</label>
-            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck+6" value="6" {{#if (isEqual system.trackers.luck 6) }}checked{{/if}}/><label for="{{actor._id}}_luck+6">6</label>
-            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck+5" value="5" {{#if (isEqual system.trackers.luck 5) }}checked{{/if}}/><label for="{{actor._id}}_luck+5">5</label>
-            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck+4" value="4" {{#if (isEqual system.trackers.luck 4) }}checked{{/if}}/><label for="{{actor._id}}_luck+4">4</label>
-            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck+3" value="3" {{#if (isEqual system.trackers.luck 3) }}checked{{/if}}/><label for="{{actor._id}}_luck+3">3</label>
-            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck+2" value="2" {{#if (isEqual system.trackers.luck 2) }}checked{{/if}}/><label for="{{actor._id}}_luck+2">2</label>
-            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck+1" value="1" {{#if (isEqual system.trackers.luck 1) }}checked{{/if}}/><label for="{{actor._id}}_luck+1">1</label>
-            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck-0" value="0" {{#if (isEqual system.trackers.luck 0) }}checked{{/if}}/><label for="{{actor._id}}_luck-0">0</label>
-            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck-1" value="-1" {{#if (isEqual system.trackers.luck -1) }}checked{{/if}}/><label for="{{actor._id}}_luck-1">-1</label>
-            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck-2" value="-2" {{#if (isEqual system.trackers.luck -2) }}checked{{/if}}/><label for="{{actor._id}}_luck-2">-2</label>
-            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck-3" value="-3" {{#if (isEqual system.trackers.luck -3) }}checked{{/if}}/><label for="{{actor._id}}_luck-3">-3</label>
-            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck-4" value="-4" {{#if (isEqual system.trackers.luck -4) }}checked{{/if}}/><label for="{{actor._id}}_luck-4">-4</label>
-            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck-5" value="-5" {{#if (isEqual system.trackers.luck -5) }}checked{{/if}}/><label for="{{actor._id}}_luck-5">-5</label>
-            <input name="system.trackers.luck" type="radio" id="{{actor._id}}_luck-6" value="-6" {{#if (isEqual system.trackers.luck -6) }}checked{{/if}}/><label for="{{actor._id}}_luck-6">-6</label>
+            {{{loopTrack system.trackers.luck.min system.trackers.luck.max system.trackers.luck.curr "system.trackers.luck.curr" }}}
         </div>
         <div class="stress">
             <i class="fa-solid fa-droplet"></i>
-            <input name="system.trackers.stress" type="radio" id="{{actor._id}}_stress-5" value="5" {{#if (isEqual system.trackers.stress 5) }}checked{{/if}}/><label for="{{actor._id}}_stress-5">5</label>
-            <input name="system.trackers.stress" type="radio" id="{{actor._id}}_stress-4" value="4" {{#if (isEqual system.trackers.stress 4) }}checked{{/if}}/><label for="{{actor._id}}_stress-4">4</label>
-            <input name="system.trackers.stress" type="radio" id="{{actor._id}}_stress-3" value="3" {{#if (isEqual system.trackers.stress 3) }}checked{{/if}}/><label for="{{actor._id}}_stress-3">3</label>
-            <input name="system.trackers.stress" type="radio" id="{{actor._id}}_stress-2" value="2" {{#if (isEqual system.trackers.stress 2) }}checked{{/if}}/><label for="{{actor._id}}_stress-2">2</label>
-            <input name="system.trackers.stress" type="radio" id="{{actor._id}}_stress-1" value="1" {{#if (isEqual system.trackers.stress 1) }}checked{{/if}}/><label for="{{actor._id}}_stress-1">1</label>
-            <input name="system.trackers.stress" type="radio" id="{{actor._id}}_stress-0" value="0" {{#if (isEqual system.trackers.stress 0) }}checked{{/if}}/><label for="{{actor._id}}_stress-0">0</label>
+            {{{loopTrack 0 system.trackers.stress.max system.trackers.stress.curr "system.trackers.stress.curr" }}}
         </div>
         <div class="hour">
             <i class="fa-regular fa-clock"></i>
-            <input name="system.trackers.hour" type="radio" id="{{actor._id}}_hour-8" value="8" {{#if (isEqual system.trackers.hour 8) }}checked{{/if}}/><label for="{{actor._id}}_hour-8">8</label>
-            <input name="system.trackers.hour" type="radio" id="{{actor._id}}_hour-7" value="7" {{#if (isEqual system.trackers.hour 7) }}checked{{/if}}/><label for="{{actor._id}}_hour-7">7</label>
-            <input name="system.trackers.hour" type="radio" id="{{actor._id}}_hour-6" value="6" {{#if (isEqual system.trackers.hour 6) }}checked{{/if}}/><label for="{{actor._id}}_hour-6">6</label>
-            <input name="system.trackers.hour" type="radio" id="{{actor._id}}_hour-5" value="5" {{#if (isEqual system.trackers.hour 5) }}checked{{/if}}/><label for="{{actor._id}}_hour-5">5</label>
-            <input name="system.trackers.hour" type="radio" id="{{actor._id}}_hour-4" value="4" {{#if (isEqual system.trackers.hour 4) }}checked{{/if}}/><label for="{{actor._id}}_hour-4">4</label>
-            <input name="system.trackers.hour" type="radio" id="{{actor._id}}_hour-3" value="3" {{#if (isEqual system.trackers.hour 3) }}checked{{/if}}/><label for="{{actor._id}}_hour-3">3</label>
-            <input name="system.trackers.hour" type="radio" id="{{actor._id}}_hour-2" value="2" {{#if (isEqual system.trackers.hour 2) }}checked{{/if}}/><label for="{{actor._id}}_hour-2">2</label>
-            <input name="system.trackers.hour" type="radio" id="{{actor._id}}_hour-1" value="1" {{#if (isEqual system.trackers.hour 1) }}checked{{/if}}/><label for="{{actor._id}}_hour-1">1</label>
-            <input name="system.trackers.hour" type="radio" id="{{actor._id}}_hour-0" value="0" {{#if (isEqual system.trackers.hour 0) }}checked{{/if}}/><label for="{{actor._id}}_hour-0">0</label>
+            {{{loopTrack 0 system.trackers.hour.max system.trackers.hour.curr "system.trackers.hour.curr" }}}
         </div>
     </div>
 </section>

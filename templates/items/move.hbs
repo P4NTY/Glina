@@ -18,7 +18,7 @@
     </div>
     {{editor system.desc target="system.desc" button=true owner=owner editable=editable}}
     {{#if (isEqual system.roll "ask")}}
-    <div>
+    <div class="askRoll">
         <h3>Opcje</h3>
         {{#each system.options as |option id|}}
         <div class="option" data-id="{{option.id}}">
@@ -51,4 +51,19 @@
         {{editor system.fail target="system.fail" button=true owner=owner editable=editable}}
     </div>
     {{/if}}
+    <h3>Modyfikacja statystyk</h3>
+    <div class="trackMods">
+        <div class="mod" data-active="{{system.mods.luck.isActive}}" data-label="luck">
+            <button>Powiększ szczęście</button>
+            <input type="number" name="system.mods.luck.value" value="{{system.mods.luck.value}}"/>
+        </div>
+        <div class="mod" data-active="{{system.mods.stress.isActive}}" data-label="stress">
+            <button>Powiększ stress</button>
+            <input type="number" name="system.mods.stress.value" value="{{system.mods.stress.value}}"/>
+        </div>
+        <div class="mod" data-active="{{system.mods.hour.isActive}}" data-label="hour">
+            <button>Powiększ godziny pracy</button>
+            <input type="number" name="system.mods.hour.value" value="{{system.mods.hour.value}}"/>
+        </div>
+    </div>
 </form>

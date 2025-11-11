@@ -20,9 +20,19 @@
                 "weakness": ""
             },
             "trackers": {
-                "luck": 0,
-                "stress": 0,
-                "hour": 0,
+                "luck": {
+                    "min": -6,
+                    "max": 10,
+                    "curr": 2
+                },
+                "stress": {
+                    "max": 5,
+                    "curr": 0
+                },
+                "hour": {
+                    "max": 8,
+                    "curr": 0
+                },
                 "hold": 0,
                 "PD": 0
             },
@@ -58,7 +68,12 @@
             "fail": "",
             "options": [],
             "category": "",
-            "roll": ""
+            "roll": "none",
+            "mods": {
+                "luck": { "isActive": false, "value": 0 },
+                "stress": { "isActive": false, "value": 0 },
+                "hour": { "isActive": false, "value": 0 }
+            }
         },
         "relation": {
             "value": 0,

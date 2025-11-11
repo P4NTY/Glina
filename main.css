@@ -147,7 +147,7 @@ form:has(.officerCard) {
     position: absolute;
     width: min-content;
     right: -40px;
-    top: 0;
+    top: -27px;
     bottom: 0
 }
 
@@ -157,10 +157,10 @@ form:has(.officerCard) {
     display: flex;
     flex-direction: column;
     background: white;
-    padding: 5px;
+    padding: 0 5px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    gap: 15px;
+    gap: 5px;
     padding-bottom: 20px;
 }
 
@@ -174,11 +174,11 @@ form:has(.officerCard) {
     display: none
 }
 
-.window-content:has(.officerCard) .trackers>div input:checked~label {
+.window-content:has(.officerCard) .trackers>div label:has(input:checked)~label {
     background: lightgray
 }
 
-.window-content:has(.officerCard) .trackers>div input:checked+label {
+.window-content:has(.officerCard) .trackers>div label:has(input:checked) {
     background: #2878c1;
     position: relative;
     font-size: 14px;
@@ -216,7 +216,6 @@ form:has(.officerCard) {
         "p weak weak"
         "p place place";
     grid-template-columns: 30%;
-    /* gap: 5px 0px; */
 }
 
 .officerCard button>i {
@@ -230,7 +229,9 @@ form:has(.officerCard) {
 
 .officerCard h1>input {
     border: none;
-    border-bottom: 2px dotted
+    border-bottom: 2px dotted;
+    padding: 30px 5px;
+    margin-bottom: 0;
 }
 
 .officerCard input[type="text"], .labels input[type="text"] {
@@ -245,7 +246,8 @@ form:has(.officerCard) {
 
 .officerCard section>p>label {
     white-space: nowrap;
-    padding-right: 5px
+    padding-right: 5px;
+    align-content: center;
 }
 
 .officerCard section.attributes {
@@ -284,7 +286,7 @@ form:has(.officerCard) {
 
 .officerCard section.nav h1 {
     position: absolute;
-    bottom: 5px;
+    bottom: 0;
     backdrop-filter: blur(5px);
     margin: 0;
     left: 0;
@@ -564,6 +566,7 @@ section.window-content:has(.officerCard) {
     overflow: visible;
     position: relative;
     height: 900px;
+    max-height: 95vh;
 }
 
 .officerCard {
@@ -578,7 +581,7 @@ section.window-content:has(.officerCard) {
 
 .labels {
     position: absolute;
-    top: 0;
+    top: 0px;
     right: calc(100% + 5px);
 }
 
@@ -653,29 +656,8 @@ li.move :is(.desc, .description) {
     padding: 0 5px;
 }
 
-article.bio > div:not(.archetype) {
-    background: white;
-    padding: 5px;
-    border: 1px solid;
-    border-radius: 5px;
-    margin: 0 5px;
-}
-
 .header p {
     font-weight: bold;
-}
-
-article.bio > :is(.archetype, .weakness) {
-    background: #2878c1;
-    color: white;
-}
-
-article.bio > :is(.archetype, .weakness) input {
-    color: white
-}
-
-article.bio > .importantPlace {
-    background: white;
 }
 
 article.bio :is(.importantPlace, .weakness) {
@@ -850,26 +832,26 @@ li.move .dialog {
     right: calc(-90% - 5px);
 }
 
-.window-content:has(.officerCard) .trackers .stress input:nth-child(-n + 6):checked~label,
-.window-content:has(.officerCard) .trackers .hour input:nth-child(-n + 8):checked~label {
+.window-content:has(.officerCard) .trackers .stress label:nth-child(-n + 4):has(:checked),
+.window-content:has(.officerCard) .trackers .hour label:nth-child(-n + 5):has(:checked) {
     background: orange;
 }
-.window-content:has(.officerCard) .trackers .stress input:nth-child(-n + 2):checked~label,
-.window-content:has(.officerCard) .trackers .hour input:nth-child(-n + 4):checked~label {
+.window-content:has(.officerCard) .trackers .stress label:nth-child(-n + 2):has(:checked),
+.window-content:has(.officerCard) .trackers .hour label:nth-child(-n + 2):has(:checked) {
     background: #ad1845;
 }
 
 .luck {
     position: relative;
-    height: 280px;
+    padding-bottom: 5px;
 }
 .stress {
     position: relative;
-    height: 130px;
+    padding-bottom: 5px;
 }
 .hour {
     position: relative;
-    height: 170px;
+    padding-bottom: 5px;
 }
 
 .luck:hover::before,
@@ -915,4 +897,42 @@ li.move .dialog {
 .message-content h4 {
     font-size: 1em;
     font-weight: normal;
+}
+
+.mod {
+    align-items: center;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background: lightgray;
+    margin: 5px;
+    display: flex;
+}
+
+.mod label {
+    white-space: nowrap;
+}
+
+.mod > input {
+    width: 50px;
+    text-align: center;
+}
+
+.mod [type="checkbox"] {
+    display: none;
+}
+
+.mod[data-active="true"] {
+    background: #aff9b3;
+}
+
+.trackMods {
+    display: flex;
+}
+
+.mod button {
+    border: 0;
+    background: transparent;
+    margin: 0;
+    padding: 0;
 }

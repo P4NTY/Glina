@@ -19,7 +19,6 @@ export default class glinaOfficer extends foundry.appv1.sheets.ActorSheet {
         context.system = context.actor.system;
         context.relations = context.items.filter( ({type}) => type === 'relation' );
         context.labels = context.items.filter( ({type}) => type === 'label' );
-        
         //Add base moves
         if (context.items.length === 0)
         this.baseMoves().then( moves => {
@@ -35,6 +34,14 @@ export default class glinaOfficer extends foundry.appv1.sheets.ActorSheet {
             attributeName: x.name.replaceAll(' ','_').toLowerCase(),
             attributeValue: context.system.investigativeMoves[x.name.replaceAll(' ','_').toLowerCase()]
         }));
+
+        // Trackers check
+        if ( context.system.trackers.luck.curr > context.system.trackers.luck.max )
+            context.system.trackers.luck.curr = context.system.trackers.luck.max;
+        if ( context.system.trackers.stress.curr > context.system.trackers.stress.max )
+            context.system.trackers.stress.curr = context.system.trackers.stress.max;
+        if ( context.system.trackers.hour.curr > context.system.trackers.hour.max )
+            context.system.trackers.hour.curr = context.system.trackers.hour.max;
         
         return context;
     }
@@ -241,7 +248,7 @@ export default class glinaOfficer extends foundry.appv1.sheets.ActorSheet {
         const item = this.actor.items.get(event.target.closest("li").getAttribute("data-item-id"));
         if (item.type !== "move") return;
         if (
-            this.actor.system.trackers.hour == 8 &&
+            this.actor.system.trackers.hour.curr == this.actor.system.trackers.hour.max &&
             item.system.category === "Śledczy"
         ) {
             ChatMessage.create({
@@ -281,7 +288,7 @@ export default class glinaOfficer extends foundry.appv1.sheets.ActorSheet {
                             if (dialogOptions.hold > 0 && parseInt(html.find('[name="mod"]:checked').val()) != 0)
                                 this.actor.update({"system.trackers.hold": 0 });
                             if (item.system.category === "Śledczy" && item.name !== "Wbrew regułom")
-                                this.actor.update({"system.trackers.hour": Math.min( parseInt(this.actor.system.trackers.hour) + 1, 8 ) });
+                                this.actor.update({"system.trackers.hour.curr": Math.min( parseInt(this.actor.system.trackers.hour.curr) + 1, this.actor.system.trackers.max ) });
                         }
                     },
                     cancel: { label: "Zamknij", callback: () => false }
@@ -305,16 +312,16 @@ export default class glinaOfficer extends foundry.appv1.sheets.ActorSheet {
                                 mod: parseInt(html.find('[name="mod"]:checked').val()),
                                 speaker: ChatMessage.getSpeaker({token: this.actor})
                             });
-                            const takeAllStress = parseInt(this.actor.system.trackers.stress)+parseInt(html.find('[name="mod"]:checked').val() )
+                            const takeAllStress = parseInt(this.actor.system.trackers.stress.curr)+parseInt(html.find('[name="mod"]:checked').val() )
                             if ( takeAllStress <= 5 ) {
                                 this.actor.update({
-                                    "system.trackers.stress": takeAllStress
+                                    "system.trackers.stress.curr": takeAllStress
                                 });
                             }
                             else {
                                 this.actor.update({
-                                    "system.trackers.stress": 5,
-                                    "system.trackers.luck": parseInt(this.actor.system.trackers.luck) - (takeAllStress - 5)
+                                    "system.trackers.stress.curr": 5,
+                                    "system.trackers.luck.curr": parseInt(this.actor.system.trackers.luck.curr) - (takeAllStress - 5)
                                 });
                             }                            
                         }
@@ -337,13 +344,13 @@ export default class glinaOfficer extends foundry.appv1.sheets.ActorSheet {
             if (dialogOptions.hold > 0 && parseInt(html.find('[name="mod"]:checked').val()) != 0)
                 this.actor.update({"system.trackers.hold": 0 });
             if (item.system.category === "Śledczy" && item.name !== "Wbrew regułom")
-                this.actor.update({"system.trackers.hour": Math.min( parseInt(this.actor.system.trackers.hour) + 1, 8 ) });
+                this.actor.update({"system.trackers.hour.curr": Math.min( parseInt(this.actor.system.trackers.hour.curr) + 1, this.actor.system.trackers.hour.max ) });
         }
     }
     _LabelItemEdit(event) {
         this.actor.items.get( 
             event.target.closest("li").getAttribute("data-item-id")
-        ).sheet.render(true);   
+        ).sheet.render(true);
     }
     _LabelItemValue(event) {
         const item = this.actor.items.get(event.target.closest("li").getAttribute("data-item-id"));

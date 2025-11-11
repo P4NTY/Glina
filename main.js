@@ -25,7 +25,7 @@ Hooks.once("init", async function () {
 
     await preloadHandlebarTemplates();
 
-    success("Successfully initialized GLINA!");
+    console.log("Successfully initialized GLINA!");
 });
 
 // Custom HandelBars
@@ -55,4 +55,12 @@ Handlebars.registerHelper( 'loop', function (n, content) {
         result += content.fn(i);
     }
     return result;
+})
+
+Handlebars.registerHelper( 'loopTrack', function (min, max, current, track) {
+    let result = ``;
+    for ( let i = max ; i >= min ; i-- ) {
+        result += `<label><input name="${track}" type="radio" value=${i} ${i == current ? 'checked' : ''}/>${i}</label>`
+    }
+    return result
 })
